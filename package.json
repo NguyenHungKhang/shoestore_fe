@@ -1,7 +1,7 @@
 {
   "name": "tkshop_fe",
   "version": "0.1.0",
-  "homepage": "https://vnauthentic.github.io/vnauthentic.svbg",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
