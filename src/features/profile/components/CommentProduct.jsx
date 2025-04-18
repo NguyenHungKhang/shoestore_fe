@@ -25,13 +25,13 @@ export default function CommentProduct({ data }) {
         const checkComment = async () => {
             try {
                 const token = Cookies.get("token");
-                const response = await axios.get(`http://localhost:3030/comment/order/${orderId}/product/${data.productId._id}`, {
+                const response = await axios.get(`https://shoestore-be.onrender.com/comment/order/${orderId}/product/${data.productId._id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
                 },)
 
-                const orderResponse = await axios.get(`http://localhost:3030/order/owner/${orderId}`,
+                const orderResponse = await axios.get(`https://shoestore-be.onrender.com/order/owner/${orderId}`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ export default function CommentProduct({ data }) {
                 "rating": parseInt(rating),
             }
             const token = Cookies.get("token");
-            const response = await axios.post("http://localhost:3030/comment/", addComment, {
+            const response = await axios.post("https://shoestore-be.onrender.com/comment/", addComment, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

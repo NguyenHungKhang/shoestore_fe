@@ -39,7 +39,7 @@ const BuyButton = ({ productId, sku }) => {
 
   const handleAddCart = async () => {
     try {
-      const response = await axios.post("http://localhost:3030/cart/add", {
+      const response = await axios.post("https://shoestore-be.onrender.com/cart/add", {
         userId: user._id,
         productId: productId,
         sku: sku,
@@ -48,7 +48,7 @@ const BuyButton = ({ productId, sku }) => {
       if (response.status === 200) {
         dispatch(increaseQuantity(productId, sku));
         const cartResponse = await axios.get(
-          `http://localhost:3030/cart/${user._id}`,
+          `https://shoestore-be.onrender.com/cart/${user._id}`,
         );
         if (cartResponse.status === 200) {
           const updatedCartItems = cartResponse.data.data?.items || [];

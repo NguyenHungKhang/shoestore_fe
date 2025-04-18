@@ -25,7 +25,7 @@ const Discountt = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3030/discount/${discountId}`)
+        const response = await axios.get(`https://shoestore-be.onrender.com/discount/${discountId}`)
         setDiscount(response.data?.data)
         console.log(response.data)
       } catch (error) {

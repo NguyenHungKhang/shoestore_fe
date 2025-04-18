@@ -68,8 +68,8 @@ const Payment = () => {
   const findDiscount = async () => {
     if (discontCode !== null) {
       const token = Cookies.get("token");
-      const response = await axios.post(`http://localhost:3030/discount/calc/${discontCode}`, { "amount": subTotal })
-      const check = await axios.get(`http://localhost:3030/order/check-discount/${discontCode}`, {
+      const response = await axios.post(`https://shoestore-be.onrender.com/discount/calc/${discontCode}`, { "amount": subTotal })
+      const check = await axios.get(`https://shoestore-be.onrender.com/order/check-discount/${discontCode}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -126,7 +126,7 @@ const Payment = () => {
         "items": (JSON.parse(localStorage.getItem('paying_products'))).map(item => ({ productId: item.productId._id, sku: item.sku, quantity: item.quantity }))
       }
       const token = Cookies.get("token");
-      const response = await axios.post(`http://localhost:3030/order/`, data, {
+      const response = await axios.post(`https://shoestore-be.onrender.com/order/`, data, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

@@ -79,7 +79,7 @@ const BlockMenu = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.get("http://localhost:3030/auth/logout");
+      const response = await axios.get("https://shoestore-be.onrender.com/auth/logout");
       if (response.status === 200) {
         Cookies.remove("token");
         dispatch(logout());

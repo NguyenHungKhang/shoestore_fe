@@ -33,10 +33,10 @@ const ProductDetail = () => {
     const fetchData = async () => {
       try {
         await axios
-          .get(`http://localhost:3030/product/${productSlug}`)
+          .get(`https://shoestore-be.onrender.com/product/${productSlug}`)
           .then(async (value) => {
             const viewsUpdate = await axios.get(
-              `http://localhost:3030/product/visit-product/${value.data._id}`,
+              `https://shoestore-be.onrender.com/product/visit-product/${value.data._id}`,
             );
             setProduct(value.data);
             for (const v of value.data.variants) {
@@ -49,7 +49,7 @@ const ProductDetail = () => {
           });
         setComment([]);
         await axios
-          .get(`http://localhost:3030/comment/product/${productSlug}`)
+          .get(`https://shoestore-be.onrender.com/comment/product/${productSlug}`)
           .then((value) => {
             let sum = 0;
             let count = 0;

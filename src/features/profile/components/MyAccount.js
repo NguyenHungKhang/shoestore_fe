@@ -91,7 +91,7 @@ const MyAccount = () => {
   const handleSave = async () => {
     try {
       const response = await axios.patch(
-        `http://localhost:3030/auth/${user._id}`,
+        `https://shoestore-be.onrender.com/auth/${user._id}`,
         {
           firstname: editedData.ten,
           lastname: editedData.ho,
@@ -122,7 +122,7 @@ const MyAccount = () => {
     try {
       if (user && user._id) {
         const response = await axios.post(
-          `http://localhost:3030/auth/changepassword`,
+          `https://shoestore-be.onrender.com/auth/changepassword`,
           {
             userId: user._id,
             oldPassword: passwordOld,

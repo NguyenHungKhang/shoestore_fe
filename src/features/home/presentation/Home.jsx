@@ -24,7 +24,7 @@ const Home = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3030/product/").then((value) => {
+        const response = await axios.get("https://shoestore-be.onrender.com/product/").then((value) => {
           value.data.forEach((item) => {
             setProductList((productList) => [item, ...productList]);
           });
@@ -40,14 +40,14 @@ const Home = () => {
     const fetchData = async () => {
       try {
         await axios
-          .get("http://localhost:3030/product/newest")
+          .get("https://shoestore-be.onrender.com/product/newest")
           .then((value) => {
             value.data.forEach((item) => {
               setProductList((productList) => [item, ...productList]);
             });
           });
         await axios
-          .get("http://localhost:3030/product/most-view")
+          .get("https://shoestore-be.onrender.com/product/most-view")
           .then((value) => {
             value.data.forEach((item) => {
               setMostViewProductList((mostViewProductList) => [

@@ -25,7 +25,7 @@ export default function Carosel() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3030/discount/`)
+        const response = await axios.get(`https://shoestore-be.onrender.com/discount/`)
         setDiscounts(response.data?.data)
         console.log(response.data)
       } catch (error) {

@@ -24,7 +24,7 @@ const CartItem = () => {
   const handleDelete = async (productId, sku) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3030/cart/?userId=${user._id}&productId=${productId}&sku=${sku}`,
+        `https://shoestore-be.onrender.com/cart/?userId=${user._id}&productId=${productId}&sku=${sku}`,
       );
       if (response.status === 200) {
         dispatch(deleteCartItem(productId, sku));
@@ -38,7 +38,7 @@ const CartItem = () => {
 
   const handleIncreaseQuantity = async (productId, sku) => {
     try {
-      const response = await axios.patch("http://localhost:3030/cart/", {
+      const response = await axios.patch("https://shoestore-be.onrender.com/cart/", {
         userId: user._id,
         productId: productId,
         sku: sku,
@@ -52,7 +52,7 @@ const CartItem = () => {
 
   const handleDecreaseQuantity = async (productId, sku) => {
     try {
-      const response = await axios.patch("http://localhost:3030/cart/", {
+      const response = await axios.patch("https://shoestore-be.onrender.com/cart/", {
         userId: user._id,
         productId: productId,
         sku: sku,

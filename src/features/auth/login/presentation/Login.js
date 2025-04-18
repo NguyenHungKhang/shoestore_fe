@@ -49,7 +49,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:3030/auth/login", {
+      const response = await axios.post("https://shoestore-be.onrender.com/auth/login", {
         email: username,
         password: password,
       });
@@ -57,7 +57,7 @@ const Login = () => {
         const data = response.data.token;
         Cookies.set("token", data, { expires: 7 });
         try {
-          const responses = await axios.get("http://localhost:3030/user/", {
+          const responses = await axios.get("https://shoestore-be.onrender.com/user/", {
             headers: {
               Authorization: `Bearer ${data}`,
             },
@@ -87,7 +87,7 @@ const Login = () => {
   };
 
   const handleGoogleLogin = async () => {
-    window.open("http://localhost:3030/auth/google/", "_self");
+    window.open("https://shoestore-be.onrender.com/auth/google/", "_self");
   }
 
   return (

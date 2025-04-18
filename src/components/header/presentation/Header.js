@@ -35,7 +35,7 @@ const Header = () => {
       try {
         if (user && user._id) {
           const response = await axios.get(
-            `http://localhost:3030/cart/${user._id}`,
+            `https://shoestore-be.onrender.com/cart/${user._id}`,
           );
           if (response.status === 200) {
             setCartItem(response.data.data?.items || []);

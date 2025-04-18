@@ -13,7 +13,7 @@ export const useGetOrderItems = () => {
     if (userId) {
       try {
         const response = await axios.get(
-          `http://localhost:3030/cart/${userId}`,
+          `https://shoestore-be.onrender.com/cart/${userId}`,
         );
         if (response.status === 200) {
           const orderItem = response.data.data?.items || [];

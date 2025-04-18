@@ -51,7 +51,7 @@ export const searchProducts = (
   return (dispatch) => {
     axios
       .get(
-        `http://localhost:3030/product/search?minPrice=${minPrice}&maxPrice=${maxPrice}&category=${category}&brand=${brand}&keyword=${
+        `https://shoestore-be.onrender.com/product/search?minPrice=${minPrice}&maxPrice=${maxPrice}&category=${category}&brand=${brand}&keyword=${
           keyword === "" ? "" : encodeURIComponent(keyword)
         }&page=${page}`,
       )

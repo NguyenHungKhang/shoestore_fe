@@ -73,7 +73,7 @@ export default function ProductDetailRating({ comments, rating, productSlug }) {
       setDisplayComment([]);
       setFilterComment([]);
       const response = await axios.get(
-        `http://localhost:3030/comment/product/${productSlug}?page=${page}&limit=10`,
+        `https://shoestore-be.onrender.com/comment/product/${productSlug}?page=${page}&limit=10`,
       );
       const data = response.data.data;
       setDisplayComment(data);

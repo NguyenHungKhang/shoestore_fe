@@ -21,7 +21,7 @@ const OrderItem = ({ status }) => {
       try {
         if (user && user._id) {
           const response = await axios.get(
-            `http://localhost:3030/order/owner/status/${status}`,
+            `https://shoestore-be.onrender.com/order/owner/status/${status}`,
             {
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ const OrderItem = ({ status }) => {
   const handleRePay = async (orderId) => {
     try {
       const token = Cookies.get("token");
-      await axios.get(`http://localhost:3030/order/repay/${orderId}`,
+      await axios.get(`https://shoestore-be.onrender.com/order/repay/${orderId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

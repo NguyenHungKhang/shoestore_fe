@@ -23,7 +23,7 @@ const CategoryBar = () => {
     const fetchData = async (page) => {
       try {
         setCategoryList([]);
-        const response = await axios.get(`http://localhost:3030/category/`);
+        const response = await axios.get(`https://shoestore-be.onrender.com/category/`);
         const data = response.data;
         setCategoryList(data);
       } catch (error) {

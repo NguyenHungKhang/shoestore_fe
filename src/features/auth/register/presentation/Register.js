@@ -64,7 +64,7 @@ const Register = () => {
 
   const handleRegister = async () => {
     try {
-      const response = await axios.post("http://localhost:3030/auth/register", {
+      const response = await axios.post("https://shoestore-be.onrender.com/auth/register", {
         firstname: firstname,
         lastname: lastname,
         email: email,

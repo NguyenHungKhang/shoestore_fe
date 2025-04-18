@@ -42,7 +42,7 @@ const Search = () => {
     const fetchData = async () => {
       try {
         setDisplayCategoryList([]);
-        const response = await axios.get(`http://localhost:3030/category/`);
+        const response = await axios.get(`https://shoestore-be.onrender.com/category/`);
         const data = response.data;
         const searchParams = new URLSearchParams(location.search);
         if (
@@ -67,7 +67,7 @@ const Search = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3030/category/`);
+        const response = await axios.get(`https://shoestore-be.onrender.com/category/`);
         const data = response.data;
         const searchParams = new URLSearchParams(location.search);
         if (

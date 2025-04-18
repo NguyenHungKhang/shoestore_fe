@@ -15,7 +15,7 @@ const OrderDetail = () => {
     useEffect(() => {
         const fetchData = async () => {
             const token = Cookies.get("token");
-            const response = await axios.get(`http://localhost:3030/order/owner/${orderId}`,
+            const response = await axios.get(`https://shoestore-be.onrender.com/order/owner/${orderId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
@@ -32,7 +32,7 @@ const OrderDetail = () => {
     const handleRePay = async () => {
         try {
             const token = Cookies.get("token");
-            await axios.get(`http://localhost:3030/order/repay/${orderId}`,
+            await axios.get(`https://shoestore-be.onrender.com/order/repay/${orderId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

@@ -31,7 +31,7 @@ const SelectBox = ({ title, searchText, data }) => {
     const fecthData = async () => {
       try {
         setListBrand(null);
-        const response = await axios.get(`http://localhost:3030/brand/`);
+        const response = await axios.get(`https://shoestore-be.onrender.com/brand/`);
         const data1 = response.data.map((item) => ({
           ...item,
           checked: false,

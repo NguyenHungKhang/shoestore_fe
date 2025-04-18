@@ -16,7 +16,7 @@ const ConfirmAccount = () => {
       try {
         console.log("1");
         const response = await axios.get(
-          `http://localhost:3030/auth/confirm/${userId}/${tokenconfirm}`,
+          `https://shoestore-be.onrender.com/auth/confirm/${userId}/${tokenconfirm}`,
         );
         console.log(response);
         if (response.status === 200) {

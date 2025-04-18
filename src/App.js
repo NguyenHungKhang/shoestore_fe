@@ -55,7 +55,7 @@ function App() {
     const fetchData = async () => {
       if (token) {
         try {
-          const responses = await axios.get("http://localhost:3030/user/owner", {
+          const responses = await axios.get("https://shoestore-be.onrender.com/user/owner", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

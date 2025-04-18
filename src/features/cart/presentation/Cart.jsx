@@ -44,7 +44,7 @@ const Cart = () => {
   const handleDeleteAll = async () => {
     try {
       const response = await axios.delete(
-        `http://localhost:3030/cart/${user._id}/clean`,
+        `https://shoestore-be.onrender.com/cart/${user._id}/clean`,
       );
       if (response.status === 200) {
         dispatch(deleteCart(!items.every((item) => item.isSelected)));
