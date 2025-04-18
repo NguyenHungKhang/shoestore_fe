@@ -6,6 +6,7 @@ import MainProduct from "../../../components/common/components/MainProduct.jsx";
 import axios from "axios";
 import Carosel from "../../../components/common/components/CaroselTest.jsx";
 import LoadingPage from "../../../components/common/components/LoadingPage.jsx";
+import cover from "../../../assets/images/cover.jpg";
 
 const Home = () => {
   const [productList, setProductList] = React.useState([]);
@@ -69,7 +70,7 @@ const Home = () => {
   ) : (
     <Grid
       container
-      spacing={3}
+      spacing={2}
       sx={{
         maxWidth: "1200px",
         display: "flex",
@@ -77,10 +78,13 @@ const Home = () => {
       }}
     >
       <Grid item xs={12}>
-        <Carosel />
-      </Grid>
-      <Grid item xs={12}>
-        {/* <MainSale /> */}
+        <img
+          src={cover}
+          style={{
+            width: "100%"
+          }}
+        />
+
       </Grid>
 
       <Grid item xs={12}>

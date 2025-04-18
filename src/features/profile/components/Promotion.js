@@ -5,7 +5,7 @@ import imgLogo from "../../../assets/images/img_logo_50px.png";
 import { useSelector } from "react-redux";
 
 const dataButtons = [
-  { title: "Ưu đãi TKMember", buttonName: "t", path: "" },
+  { title: "Ưu đãi Member", buttonName: "t", path: "" },
   { title: "Quà của bạn", buttonName: "a", path: "" },
 ];
 

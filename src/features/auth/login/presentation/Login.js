@@ -96,7 +96,7 @@ const Login = () => {
       <Container sx={{ width: "1200px", marginTop: "15px" }}>
         <Toolbar sx={{ flexDirection: "column" }}>
           <Typography component="div" sx={{ width: "auto" }} fontWeight={700} fontSize={40}>
-            Đăng nhập TKMember
+            Đăng nhập Member
           </Typography>
           <img alt="Login" src={imgLogin} height={300}></img>
           <TextField

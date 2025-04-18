@@ -85,7 +85,7 @@ const Register = () => {
         <Container sx={{ width: "1200px", marginTop: "15px" }}>
           <Toolbar sx={{ flexDirection: "column" }}>
             <Typography variant="h5" component="div" sx={{ width: "auto" }}>
-              Đăng ký TKMember
+              Đăng ký Member
             </Typography>
             <img alt="Login" src={imgLogin} height={300}/>
 
